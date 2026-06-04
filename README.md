@@ -13,27 +13,27 @@ Este repositório contém a implementação completa do framework Meta-DR, inclu
 
 ## Repository structure and usage
 
-- **`Meta_DR.ipynb`**: Main notebook with the full pipeline (meta-feature extraction, DR evaluation, meta-dataset construction, meta-learner training, and evaluation).
-- **`data/`**: Processed data (baseline classification, DR results, meta-features, predictions)..
+- **`Meta_DR.ipynb`**: Notebook principal contendo todo o fluxo do projeto, incluindo extração de metafeatures, avaliação das técnicas de redução de dimensionalidade, construção do meta-conjunto de dados, treinamento do meta-modelo e análise dos resultados.
+- **`data/`**: Diretório contendo os dados processados utilizados durante os experimentos, incluindo resultados das técnicas de redução de dimensionalidade, metafeatures extraídas, rankings, previsões e demais artefatos gerados.
+- 
+### Executando o Projeto
 
-### Running on your PC
-
-1. **Clone the repo** and open the project folder (e.g. `meta-dr/`).
-2. **Optional but recommended:** create a virtual environment so dependencies stay isolated:
-   ```bash
+1. **Clone o repositório.**
+2. **Opcional, mas recomendado:** Crie um ambiente virtual:
+```bash
    python -m venv .venv
    source .venv/bin/activate   # Linux/macOS
-   # or:  .venv\Scripts\activate   # Windows
-   ```
-   On **Debian/Ubuntu**, if you get *ensurepip is not available*, install the venv package first:
-   ```bash
-   sudo apt install python3.12-venv   # or python3-venv
-   ```
-   then run `python -m venv .venv` again.
-3. **Install dependencies:**
-   ```bash
+   # ou:  .venv\Scripts\activate   # Windows
+```
+   No **Debian/Ubuntu**, se você receber o erro *ensurepip is not available*, instale primeiro o pacote venv:
+```bash
+   sudo apt install python3.12-venv   # ou python3-venv
+```
+   Em seguida, execute `python -m venv .venv` novamente.
+3. **Instale as dependências:**
+```bash
    pip install -r requirements.txt
-   ```
-4. **Open and run the notebook** from the **project root** (so paths like `data/...` work). Use Jupyter, VS Code, or any environment that runs `.ipynb` files.
+```
+4. **Abra e execute o notebook** a partir da **raiz do projeto** (para que caminhos como `data/...` funcionem corretamente). Use o Jupyter, VS Code ou qualquer ambiente que execute arquivos `.ipynb`.
 
-The first cell installs `openml`, `pymfe`, and `mlxtend` if you are on Google Colab; when running locally, those packages are provided by `requirements.txt`. The notebook detects local runs and skips Google Drive mount, so no `.venv` or Colab is required—but using a `.venv` is recommended to avoid conflicts with other Python projects.
+O primeiro cell instala `openml`, `pymfe` e `mlxtend` caso você esteja no Google Colab; ao executar localmente, esses pacotes já são fornecidos pelo `requirements.txt`. O notebook detecta execuções locais e pula a montagem do Google Drive, portanto nenhum `.venv` ou Colab é necessário — mas usar um `.venv` é recomendado para evitar conflitos com outros projetos Python.
