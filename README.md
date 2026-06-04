@@ -1,4 +1,4 @@
-# Meta-DR: Meta-Learning for Dimensionality Reduction Recommendation
+# Meta-DR: Meta-Aprendizado para Recomendação de Técnica de Redução de Dimensionalidade
 
 Meta-DR é um framework de meta-aprendizagem para recomendação de técnicas de redução de dimensionalidade com base nas características dos conjuntos de dados.
 
